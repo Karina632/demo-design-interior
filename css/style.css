@@ -1,0 +1,231 @@
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    position: relative;
+
+    height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    padding: 160px 60px 50px;
+
+    background-image: url("../images/hero.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    overflow: hidden;
+}
+
+/* =========================
+   OVERLAYS
+========================= */
+
+.hero-overlay-left {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 45%;
+    height: 100%;
+
+    background: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.8),
+        transparent
+    );
+}
+
+.hero-overlay-bottom {
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 40%;
+
+    background: linear-gradient(
+        180deg,
+        transparent,
+        rgb(0, 0, 0)
+    );
+}
+
+/* =========================
+   HERO CONTENT
+========================= */
+
+.hero-content {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 600px;
+}
+
+.hero-content h1 {
+    font-size: 5rem;
+
+    line-height: 1.1;
+
+    margin-bottom: 30px;
+}
+
+.hero-button {
+    display: inline-block;
+
+    padding: 14px 32px;
+
+    border-radius: 999px;
+
+    background: rgba(255, 255, 255, 0.15);
+
+    backdrop-filter: blur(10px);
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+    transition: 0.3s ease;
+}
+
+.hero-button:hover {
+    transform: translateY(-3px);
+}
+
+/* =========================
+   FEATURES
+========================= */
+
+.hero-features-wrapper {
+    position: relative;
+
+    z-index: 2;
+}
+
+.hero-features {
+    position: relative;
+
+    z-index: 2;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 30px;
+}
+
+.hero-features {
+    position: relative;
+
+    z-index: 2;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 30px;
+}
+
+.feature-card {
+    position: relative;
+
+    padding: 25px;
+
+    border-radius: 16px;
+
+    overflow: hidden;
+
+    cursor: pointer;
+
+    transition: 0.35s ease;
+}
+
+.feature-card::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+
+    height: 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            transparent,
+            rgba(255, 122, 0, 0.18)
+        );
+
+    transition: 0.35s ease;
+
+    z-index: -1;
+}
+
+.feature-card:hover::before {
+    height: 100%;
+}
+
+.feature-icon {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 48px;
+
+    height: 48px;
+
+    margin-bottom: 20px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    backdrop-filter: blur(10px);
+}
+
+.feature-icon i {
+    font-size: 1.1rem;
+}
+
+.feature-card h3 {
+    margin-bottom: 14px;
+
+    font-size: 1.2rem;
+}
+
+.feature-line {
+    width: 40px;
+
+    height: 1px;
+
+    margin-bottom: 18px;
+
+    background: var(--accent);
+
+    transition: 0.35s ease;
+}
+
+.feature-card:hover .feature-line {
+    width: 250px;
+
+    background: white;
+}
+
+.feature-card p {
+    color: var(--text-secondary);
+
+    line-height: 1.6;
+}
