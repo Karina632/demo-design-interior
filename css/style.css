@@ -429,7 +429,7 @@
 
     color: rgba(255,255,255,.62);
 
-    font-size: .95rem;
+    font-size: 1.1rem;
 
     line-height: 1.7;
 }
@@ -486,7 +486,7 @@
 
     color: rgba(255,255,255,.5);
 
-    font-size: .68rem;
+    font-size: 1rem;
 
     letter-spacing: .12em;
 
@@ -497,7 +497,7 @@
 .facilities-price strong {
     color: #ffffff;
 
-    font-size: 1rem;
+    font-size: 1.2rem;
 
     font-weight: 600;
 }
@@ -506,7 +506,7 @@
 .facilities-price small {
     color: rgba(255, 255, 255, 0.616);
 
-    font-size: .72rem;
+    font-size: 1rem;
 }
 
 
@@ -620,7 +620,7 @@
 
     color: #f4f0e8;
 
-    font-size: 1.1rem;
+    font-size: 1.3rem;
 
     font-weight: 500;
 }
@@ -629,7 +629,7 @@
 .facility-item p {
     color: rgba(255, 255, 255, 0.723);
 
-    font-size: .90rem;
+    font-size: 1.1rem;
 
     line-height: 1.5;
 }
@@ -650,14 +650,14 @@
 
     color: rgba(255, 255, 255, 0.613);
 
-    font-size: .90rem;
+    font-size: 1rem;
 }
 
 
 .facilities-note i {
     color: rgba(251, 5, 5, 0.65);
 
-    font-size: .90rem;
+    font-size: 1.1rem;
 }
 
 
@@ -801,7 +801,7 @@
 
     color: white;
 
-    font-size: 0.74rem;
+    font-size: 1rem;
 
     font-weight: 600;
 
@@ -2903,7 +2903,7 @@
     color:
         rgba(255,255,255,.4);
 
-    font-size: .7rem;
+    font-size: .90em;
 
     line-height: 1.6;
 }
@@ -2927,7 +2927,7 @@
 
     color: white;
 
-    font-size: .68rem;
+    font-size: .90rem;
 
     transition:
         border-color .3s ease,
