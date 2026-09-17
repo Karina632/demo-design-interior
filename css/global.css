@@ -15,6 +15,21 @@ html {
 body {
     overflow-x: hidden;
 
+    background: #16100b;
+
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+body::before {
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: -10;
+
     background:
         linear-gradient(
             rgba(15, 20, 15, 0.72),
@@ -24,10 +39,9 @@ body {
 
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
+    background-repeat: no-repeat;
 
-    color: #ffffff;
-    font-family: Arial, sans-serif;
+    pointer-events: none;
 }
 
 
