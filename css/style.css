@@ -154,7 +154,7 @@
 
     margin-bottom: 22px;
 
-    color: rgba(255, 255, 255, 0.78);
+    color: rgba(255, 255, 255, 0.726);
 
     font-size: 1rem;
 
@@ -183,6 +183,24 @@
     font-size: 1.05rem;
 
     font-weight: 600;
+}
+.hero-check {
+    display: flex;
+
+    align-items: baseline;
+
+    gap: 7px;
+
+    margin-bottom: 28px;
+}
+
+
+.hero-check strong {
+    color: #57c716c5;
+
+    font-size: 1.05rem;
+
+    font-weight: 500;
 }
 
 
@@ -332,7 +350,7 @@
 
     padding: 150px 60px;
 
-    background: #101310;
+     background: transparent;
 }
 
 
@@ -420,7 +438,7 @@
 .facilities-heading h2 span {
     display: block;
 
-    color: #ff7a00;
+    color: #41744d;
 }
 
 
@@ -435,37 +453,26 @@
 }
 
 
-/* =========================
-   MAIN CARD
-========================= */
+/* =========================================================
+   FACILITIES — CLEAN / NATURE
+========================================================= */
 
 .facilities-card {
     padding: 0;
 
-    overflow: hidden;
+    background: transparent;
 
-    background:
-        linear-gradient(
-            #141814,
-            #141814
-        ) padding-box,
+    border: none;
 
-        linear-gradient(
-            135deg,
-            #ff7a00,
-            #ffb347,
-            rgba(255, 254, 254, 0.753)
-        ) border-box;
+    border-radius: 0;
 
-    border: 1px solid transparent;
-
-    border-radius: 24px;
+    overflow: visible;
 }
 
 
-/* =========================
+/* =========================================================
    PRICE
-========================= */
+========================================================= */
 
 .facilities-price {
     display: flex;
@@ -474,57 +481,65 @@
 
     gap: 10px;
 
-    padding: 28px 32px;
+    margin-bottom: 42px;
 
-    border-bottom:
-        1px solid rgba(255,255,255,.09);
+    padding: 0;
+
+    border: none;
 }
-
 
 .facilities-price span {
     margin-right: auto;
 
-    color: rgba(255,255,255,.5);
+    color: rgba(255, 255, 255, 0.473);
 
-    font-size: 1rem;
+    font-size: .80rem;
 
-    letter-spacing: .12em;
+    font-weight: 600;
+
+    letter-spacing: .14em;
 
     text-transform: uppercase;
 }
 
-
 .facilities-price strong {
-    color: #ffffff;
+    color: #f4f0e8;
 
-    font-size: 1.2rem;
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
 
-    font-weight: 600;
+    font-size: 1.25rem;
+
+    font-weight: 400;
 }
-
 
 .facilities-price small {
-    color: rgba(255, 255, 255, 0.616);
+    color: rgba(255,255,255,.38);
 
-    font-size: 1rem;
+    font-size: .72rem;
 }
 
 
-/* =========================
+/* =========================================================
    GRID
-========================= */
+========================================================= */
 
 .facilities-grid {
     display: grid;
 
     grid-template-columns:
-        repeat(2, 1fr);
+        repeat(2, minmax(0, 1fr));
+
+    border-top:
+        1px solid rgba(255,255,255,.12);
 }
 
 
-/* =========================
+/* =========================================================
    ITEM
-========================= */
+========================================================= */
 
 .facility-item {
     position: relative;
@@ -532,7 +547,7 @@
     display: grid;
 
     grid-template-columns:
-        45px 52px 1fr;
+        35px 52px minmax(0, 1fr);
 
     align-items: center;
 
@@ -540,43 +555,70 @@
 
     min-height: 145px;
 
-    padding: 28px 32px;
+    padding: 28px 30px;
+
+    background: transparent;
 
     border-bottom:
-        1px solid rgba(255,255,255,.08);
+        1px solid rgba(255,255,255,.10);
 
     transition:
-        background .35s ease;
+        background .35s ease,
+        padding .35s ease;
 }
 
+
+/* Vertical divider */
 
 .facility-item:nth-child(odd) {
     border-right:
-        1px solid rgba(255,255,255,.08);
+        1px solid rgba(255,255,255,.10);
 }
 
+
+/* =========================================================
+   HOVER
+========================================================= */
 
 .facility-item:hover {
-    background:  linear-gradient(
-            90deg,
-            #ff7b0012,
-            #ffb24714
-        );;
+    background:
+        rgba(65,116,77,.045);
+
+    padding-left: 34px;
 }
 
+
+/* =========================================================
+   NUMBER
+========================================================= */
 
 .facility-number {
     align-self: start;
 
-    padding-top: 4px;
+    padding-top: 5px;
 
-    color: #ffffff;
+    color:
+        rgba(255,255,255,.28);
 
-    font-size: .90rem;
+    font-size: .62rem;
 
-    letter-spacing: .08em;
+    font-weight: 600;
+
+    letter-spacing: .12em;
+
+    transition:
+        color .35s ease;
 }
 
+.facility-item:hover .facility-number {
+    color:
+        rgba(65,116,77,.8);
+}
+
+
+/* =========================================================
+   ICON
+========================================================= */
 
 .facility-icon {
     display: flex;
@@ -585,59 +627,77 @@
 
     justify-content: center;
 
-    width: 46px;
-    height: 46px;
+    width: 48px;
+    height: 48px;
 
     border:
-        1px solid rgba(200, 104, 15, 0.22);
+        1px solid rgba(65,116,77,.35);
 
     border-radius: 50%;
 
-    color: #ff7b00d1;
+    color: #5f996c;
+
+    background:
+        rgba(65,116,77,.045);
 
     transition:
         background .35s ease,
+        border-color .35s ease,
         transform .35s ease;
 }
 
+.facility-icon i {
+    font-size: .9rem;
+}
 
 .facility-item:hover .facility-icon {
     background:
-        rgba(181,154,106,.1);
+        rgba(65,116,77,.11);
+
+    border-color:
+        rgba(65,116,77,.65);
 
     transform:
         translateY(-2px);
 }
 
 
-.facility-icon i {
-    font-size: .9rem;
-}
-
+/* =========================================================
+   TEXT
+========================================================= */
 
 .facility-item h3 {
-    margin-bottom: 7px;
+    margin-bottom: 6px;
 
     color: #f4f0e8;
 
-    font-size: 1.3rem;
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
 
-    font-weight: 500;
+    font-size: 1.30rem;
+
+    font-weight: 400;
+
+    line-height: 1.1;
 }
-
 
 .facility-item p {
-    color: rgba(255, 255, 255, 0.723);
+    max-width: 330px;
 
-    font-size: 1.1rem;
+    color:
+        rgba(255,255,255,.48);
 
-    line-height: 1.5;
+    font-size: 1rem;
+
+    line-height: 1.55;
 }
 
 
-/* =========================
+/* =========================================================
    NOTE
-========================= */
+========================================================= */
 
 .facilities-note {
     display: flex;
@@ -646,18 +706,21 @@
 
     gap: 10px;
 
-    padding: 18px 32px;
+    margin-top: 25px;
 
-    color: rgba(255, 255, 255, 0.613);
+    padding: 0;
+
+    color:
+        rgba(255, 255, 255, 0.637);
 
     font-size: 1rem;
 }
 
-
 .facilities-note i {
-    color: rgba(251, 5, 5, 0.65);
+    color:
+        rgb(255, 255, 255);
 
-    font-size: 1.1rem;
+    font-size: 1.2rem;
 }
 
 
@@ -668,7 +731,7 @@
 .booking-section {
     padding: 45px 60px 120px;
 
-    background: var(--background);
+    background: transparent;
 }
 
 
@@ -819,8 +882,8 @@
     background:
         linear-gradient(
             135deg,
-            #003b95,
-            #0071c2
+            #009500,
+            #128700
         );
 }
 
@@ -954,7 +1017,7 @@
 
     padding: 150px 60px 140px;
 
-    background: var(--background);
+    background: transparent;
 
     overflow: hidden;
 }
@@ -1567,7 +1630,7 @@
 
     padding: 150px 60px 140px;
 
-    background: var(--background);
+    background: transparent;
 
     overflow: hidden;
 }
@@ -1766,19 +1829,22 @@
     z-index: 3;
 }
 
+
 .experience-number {
     margin-bottom: 9px;
 
-    color:
-        rgba(255,255,255,.55);
+    color: rgba(255,255,255,.55);
 
     font-size: .64rem;
 
     letter-spacing: .12em;
 }
 
+
 .experience-title {
     max-width: 500px;
+
+    margin: 0;
 
     color: white;
 
@@ -1796,11 +1862,11 @@
     letter-spacing: -.03em;
 }
 
+
 .experience-meta {
     margin-top: 10px;
 
-    color:
-        rgba(255,255,255,.65);
+    color: rgba(255,255,255,.65);
 
     font-size: .7rem;
 
@@ -1809,714 +1875,262 @@
 
 
 /* =========================================================
-   ACTION
+   INFO
 ========================================================= */
 
-.experience-action {
+.experience-info {
     display: flex;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 18px;
+
+    margin-top: 14px;
+}
+
+
+.experience-info span {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color: rgba(255,255,255,.78);
+
+    font-size: .72rem;
+}
+
+
+.experience-info i {
+    color: var(--accent);
+
+    font-size: .68rem;
+}
+
+
+/* =========================================================
+   MAP LINK
+========================================================= */
+
+.experience-map-link {
+    display: inline-flex;
 
     align-items: center;
 
     gap: 9px;
 
-    margin-top: 16px;
+    margin-top: 17px;
 
-    color:
-        rgba(255,255,255,.72);
+    padding: 10px 15px;
+
+    border:
+        1px solid rgba(255,255,255,.22);
+
+    border-radius: 999px;
+
+    color: white;
+
+    background:
+        rgba(255,255,255,.07);
 
     font-size: .68rem;
 
-    letter-spacing: .05em;
+    font-weight: 600;
 
-    opacity: 0;
-
-    transform: translateY(8px);
+    backdrop-filter: blur(8px);
 
     transition:
-        opacity .4s ease,
-        transform .4s ease;
+        transform .3s ease,
+        background .3s ease,
+        border-color .3s ease;
 }
 
-.experience-action i {
+
+.experience-map-link i {
+    color: var(--accent);
+
     font-size: .6rem;
 
     transition:
         transform .3s ease;
 }
 
-.experience-card:hover
-.experience-action {
-    opacity: 1;
 
-    transform: translateY(0);
-}
-
-.experience-card:hover
-.experience-action i {
-    transform: translateX(4px);
-}
-
-
-/* =========================================================
-   MODAL
-========================================================= */
-
-.experience-modal {
-    position: fixed;
-
-    inset: 0;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    padding: 40px;
-
-    background:
-        rgba(5,6,5,.96);
-
-    backdrop-filter: blur(18px);
-
-    opacity: 0;
-
-    visibility: hidden;
-
-    pointer-events: none;
-
-    transition:
-        opacity .35s ease,
-        visibility .35s ease;
-
-    z-index: 21000;
-}
-
-.experience-modal.active {
-    opacity: 1;
-
-    visibility: visible;
-
-    pointer-events: auto;
-}
-
-
-/* =========================================================
-   MODAL INNER
-========================================================= */
-
-.experience-modal-inner {
-    position: relative;
-
-    width: 100%;
-    height: 100%;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-}
-
-
-/* =========================================================
-   CLOSE
-========================================================= */
-
-.experience-modal-close {
-    position: absolute;
-
-    top: 0;
-    right: 0;
-
-    width: 48px;
-    height: 48px;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    border:
-        1px solid rgba(255,255,255,.2);
-
-    border-radius: 50%;
-
-    color: white;
-
-    cursor: pointer;
-
-    z-index: 30;
-
-    transition:
-        background .3s ease,
-        transform .3s ease;
-}
-
-.experience-modal-close:hover {
-    background:
-        rgba(255,255,255,.1);
-
-    transform: rotate(90deg);
-}
-
-.experience-modal-close span {
-    position: absolute;
-
-    width: 18px;
-    height: 1px;
-
-    background: white;
-}
-
-.experience-modal-close span:first-child {
-    transform: rotate(45deg);
-}
-
-.experience-modal-close span:last-child {
-    transform: rotate(-45deg);
-}
-
-
-/* =========================================================
-   MODAL CARD
-========================================================= */
-
-.experience-modal-card {
-    width: min(1120px, 92vw);
-
-    max-height: 88vh;
-
-    display: grid;
-
-    grid-template-columns:
-        minmax(0, .95fr)
-        minmax(0, 1.05fr);
-
-    overflow: hidden;
-
-    border:
-        1px solid rgba(255,255,255,.1);
-
-    border-radius: 18px;
-
-    background: #111;
-
-    box-shadow:
-        0 40px 100px
-        rgba(0,0,0,.55);
-}
-
-
-/* =========================================================
-   MODAL IMAGE
-========================================================= */
-
-.experience-modal-image {
-    position: relative;
-
-    min-height: 620px;
-
-    overflow: hidden;
-
-    background: #171717;
-}
-
-.experience-modal-image img {
-    width: 100%;
-    height: 100%;
-
-    display: block;
-
-    object-fit: cover;
-
-    transition:
-        opacity .25s ease;
-}
-
-.experience-modal-image-overlay {
-    position: absolute;
-
-    inset: 0;
-
-    background:
-        linear-gradient(
-            180deg,
-            transparent 45%,
-            rgba(0,0,0,.7)
-        );
-}
-
-
-/* =========================================================
-   IMAGE LABEL
-========================================================= */
-
-.experience-modal-image-label {
-    position: absolute;
-
-    left: 28px;
-    right: 28px;
-    bottom: 25px;
-
-    display: flex;
-
-    align-items: flex-end;
-
-    justify-content: space-between;
-
-    gap: 20px;
-}
-
-.experience-modal-category {
-    color: white;
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-    font-size: 1.45rem;
-}
-
-.experience-modal-distance {
-    color:
-        rgba(255,255,255,.7);
-
-    font-size: .68rem;
-}
-
-
-/* =========================================================
-   MODAL CONTENT
-========================================================= */
-
-.experience-modal-content {
-    display: flex;
-
-    flex-direction: column;
-
-    min-width: 0;
-
-    padding: 45px;
-
-    overflow-y: auto;
-}
-
-.experience-modal-heading {
-    display: flex;
-
-    flex-direction: column;
-}
-
-.experience-modal-number {
-    margin-bottom: 12px;
-
-    color: var(--accent);
-
-    font-size: .65rem;
-
-    letter-spacing: .14em;
-}
-
-.experience-modal-heading h2 {
-    max-width: 520px;
-
-    margin: 0;
-
-    color: white;
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-    font-size:
-        clamp(2.8rem, 4vw, 4.5rem);
-
-    font-weight: 400;
-
-    line-height: .92;
-
-    letter-spacing: -.05em;
-}
-
-
-/* =========================================================
-   QUICK INFO
-========================================================= */
-
-.experience-quick-info {
-    display: grid;
-
-    grid-template-columns:
-        repeat(3, 1fr);
-
-    gap: 10px;
-
-    margin-top: 35px;
-}
-
-.experience-quick-item {
-    min-width: 0;
-
-    display: flex;
-
-    align-items: flex-start;
-
-    gap: 10px;
-
-    padding: 14px;
-
-    border:
-        1px solid rgba(255,255,255,.09);
-
-    border-radius: 10px;
-
-    background:
-        rgba(255,255,255,.025);
-}
-
-.experience-quick-item i {
-    margin-top: 2px;
-
-    color: var(--accent);
-
-    font-size: .75rem;
-}
-
-.experience-quick-item div {
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 4px;
-
-    min-width: 0;
-}
-
-.experience-quick-item span {
-    color:
-        rgba(255,255,255,.4);
-
-    font-size: .58rem;
-
-    text-transform: uppercase;
-
-    letter-spacing: .08em;
-}
-
-.experience-quick-item strong {
-    color: white;
-
-    font-size: .7rem;
-
-    font-weight: 500;
-
-    line-height: 1.3;
-}
-
-
-/* =========================================================
-   DESCRIPTION
-========================================================= */
-
-.experience-description {
-    margin-top: 30px;
-}
-
-.experience-description p {
-    max-width: 570px;
-
-    margin: 0;
-
-    color:
-        rgba(255,255,255,.68);
-
-    font-size: .85rem;
-
-    line-height: 1.75;
-}
-
-
-/* =========================================================
-   MAP
-========================================================= */
-
-.experience-map {
-    position: relative;
-
-    height: 170px;
-
-    margin-top: 30px;
-
-    overflow: hidden;
-
-    border-radius: 11px;
-
-    border:
-        1px solid rgba(255,255,255,.08);
-
-    background: #181818;
-}
-
-.experience-map iframe {
-    display: block;
-
-    width: 100%;
-    height: 100%;
-
-    border: 0;
-
-    filter:
-        grayscale(.8)
-        contrast(1.05)
-        brightness(.72);
-}
-
-
-/* =========================================================
-   MAP BUTTON
-========================================================= */
-
-.experience-map-button {
-    display: flex;
-
-    align-items: center;
-
-    justify-content: space-between;
-
-    gap: 15px;
-
-    margin-top: 10px;
-
-    padding: 13px 15px;
-
-    border:
-        1px solid rgba(255,255,255,.14);
-
-    border-radius: 10px;
-
-    color: white;
-
-    font-size: .72rem;
-
-    transition:
-        border-color .3s ease,
-        background .3s ease,
-        transform .3s ease;
-}
-
-.experience-map-button i {
-    color: var(--accent);
-
-    font-size: .65rem;
-
-    transition:
-        transform .3s ease;
-}
-
-.experience-map-button:hover {
-    border-color:
-        rgba(255,122,0,.5);
-
-    background:
-        rgba(255,122,0,.06);
-
+.experience-map-link:hover {
     transform: translateY(-2px);
+
+    background:
+        rgba(255,255,255,.13);
+
+    border-color:
+        rgba(255,255,255,.4);
 }
 
-.experience-map-button:hover i {
+
+.experience-map-link:hover i {
     transform:
         translate(2px,-2px);
 }
 
 
-/* =========================================================
-   DISCLAIMER
-========================================================= */
-
-.experience-disclaimer {
-    display: block;
-
-    margin-top: 15px;
-
-    color:
-        rgba(255,255,255,.3);
-
-    font-size: .57rem;
-
-    line-height: 1.5;
-}
-
 
 /* =========================================================
-   EXPERIENCE MODAL — COMPACT
+   LOCATION — LOCAȚIA NOASTRĂ
 ========================================================= */
 
-.experience-modal {
-    padding: 30px;
+.location-section {
+    position: relative;
+    padding: 150px 60px;
+    background: transparent;
 }
 
+.location-container {
+    width: 100%;
+    max-width: 1250px;
+    margin: 0 auto;
+}
 
-.experience-modal-card {
+/* HEADING */
+
+.location-heading {
+    max-width: 720px;
+    margin-bottom: 60px;
+}
+
+.location-heading .section-eyebrow {
+    margin-bottom: 20px;
+}
+
+.location-heading h2 {
+    margin-bottom: 25px;
+    color: #f4f0e8;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(3.4rem, 6vw, 6.5rem);
+    font-weight: 400;
+    line-height: .92;
+    letter-spacing: -.055em;
+}
+
+.location-heading h2 span {
     display: block;
+    color: #41744d;
+}
 
-    width: min(850px, 92vw);
+.location-heading > p {
+    max-width: 560px;
+    color: rgba(255,255,255,.62);
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
 
-    max-height: 88vh;
+/* MAP */
 
-    overflow-y: auto;
+.location-map {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 8;
+    max-width: 1000px;
+    margin: 0 auto;
 
-    border:
-        1px solid rgba(255,255,255,.1);
+    padding: 8px;
 
-    border-radius: 18px;
+    background: linear-gradient(
+        135deg,
+        rgba(65,116,77,.85),
+        rgba(120,134,108,.45),
+        rgba(255,255,255,.18)
+    );
 
-    background: #76472f18;
+    border-radius: 28px;
 
     box-shadow:
-        0 40px 100px rgba(0,0,0,.55);
+        0 25px 70px rgba(0,0,0,.28),
+        0 0 0 1px rgba(255,255,255,.06);
 }
 
+/* INNER MAP */
 
-/* =========================================================
-   HIDE LARGE IMAGE
-========================================================= */
-
-.experience-modal-image {
-    display: none;
+.location-map::before {
+    content: "";
+    position: absolute;
+    inset: 8px;
+    border-radius: 21px;
+    pointer-events: none;
+    z-index: 2;
+    box-shadow:
+        inset 0 0 0 1px rgba(255,255,255,.10),
+        inset 0 0 40px rgba(0,0,0,.12);
 }
 
+.location-map iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
 
-/* =========================================================
-   CONTENT
-========================================================= */
+    border: none;
+    border-radius: 21px;
 
-.experience-modal-content {
-    padding: 42px 45px 38px;
-
-    overflow: visible;
+    filter: saturate(.75) contrast(.95);
 }
 
+/* BUTTON */
 
-/* =========================================================
-   HEADING
-========================================================= */
-
-.experience-modal-number {
-    margin-bottom: 9px;
-
-    font-size: .6rem;
+.location-action {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    margin-top: 38px;
 }
 
+.location-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 11px;
 
-.experience-modal-heading h2 {
-    max-width: 650px;
+    min-width: 190px;
+    padding: 16px 28px;
 
-    font-size:
-        clamp(2.6rem, 5vw, 4.5rem);
+    color: #f4f0e8;
+    background: #41744d;
 
-    line-height: .9;
+    border: 1px solid rgba(120,134,108,.7);
+    border-radius: 999px;
+
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+
+    box-shadow: 0 12px 30px rgba(0,0,0,.18);
+
+    transition:
+        transform .3s ease,
+        background .3s ease,
+        box-shadow .3s ease;
 }
 
-
-/* =========================================================
-   QUICK INFO
-========================================================= */
-
-.experience-quick-info {
-    margin-top: 28px;
-
-    gap: 8px;
+.location-button i {
+    font-size: .95rem;
 }
 
-
-.experience-quick-item {
-    padding: 12px;
-
-    border-radius: 9px;
+.location-button:hover {
+    background: #4f875b;
+    transform: translateY(-3px);
+    box-shadow: 0 16px 35px rgba(0,0,0,.25);
 }
 
-
-.experience-quick-item i {
-    font-size: .7rem;
+.location-maps-button {
+    background: transparent;
+    border-color: rgba(120,134,108,.55);
 }
 
-
-.experience-quick-item span {
-    font-size: .55rem;
+.location-maps-button:hover {
+    background: rgba(65,116,77,.12);
 }
-
-
-.experience-quick-item strong {
-    font-size: .68rem;
-}
-
-
-/* =========================================================
-   DESCRIPTION
-========================================================= */
-
-.experience-description {
-    margin-top: 25px;
-}
-
-
-.experience-description p {
-    max-width: 650px;
-
-    font-size: .82rem;
-
-    line-height: 1.65;
-}
-
-
-/* =========================================================
-   MAP
-========================================================= */
-
-.experience-map {
-    height: 145px;
-
-    margin-top: 22px;
-}
-
-
-/* =========================================================
-   GOOGLE MAPS BUTTON
-========================================================= */
-
-.experience-map-button {
-    margin-top: 8px;
-
-    padding: 12px 14px;
-
-    font-size: .7rem;
-}
-
-
-/* =========================================================
-   DISCLAIMER
-========================================================= */
-
-.experience-disclaimer {
-    margin-top: 12px;
-
-    font-size: .80rem;
-}
-
-
-/* =========================================================
-   CLOSE
-========================================================= */
-
-.experience-modal-close {
-    top: 0;
-    right: 0;
-}
-
-
 
 /* =========================================================
    REVIEWS
@@ -2527,7 +2141,7 @@
 
     padding: 150px 60px 130px;
 
-    background: var(--background);
+    background: transparent;
 
     overflow: hidden;
 }
@@ -3019,8 +2633,8 @@
     background:
         linear-gradient(
             180deg,
-            rgba(0,0,0,.42),
-            rgba(0,0,0,.78)
+            rgba(0, 0, 0, 0.092),
+            rgb(0, 0, 0)
         );
 
     z-index: -1;
@@ -3180,4 +2794,362 @@
 
 .final-cta-buttons i {
     font-size: .75rem;
+}
+
+
+/* =========================================================
+   PRICING — CAZARE & TARIFE
+========================================================= */
+
+.pricing-section {
+    position: relative;
+
+    padding:
+        120px
+        30px;
+
+    background: var(--background);
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.pricing-header {
+    max-width: 700px;
+
+    margin:
+        0 auto 55px;
+
+    text-align: center;
+}
+
+
+.pricing-header .section-eyebrow {
+    display: block;
+
+    margin-bottom: 12px;
+
+    color: var(--accent);
+
+    font-size: .65rem;
+
+    font-weight: 600;
+
+    letter-spacing: .16em;
+}
+
+
+.pricing-header .section-title {
+    margin: 0;
+
+    color: var(--text);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(2.4rem, 5vw, 4rem);
+
+    font-weight: 400;
+
+    line-height: .95;
+
+    letter-spacing: -.04em;
+}
+
+
+.pricing-intro {
+    max-width: 500px;
+
+    margin:
+        20px auto 0;
+
+    color: var(--muted);
+
+    font-size: .82rem;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   GRID
+========================================================= */
+
+.pricing-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 22px;
+
+    max-width: 900px;
+
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.pricing-card {
+    position: relative;
+
+    overflow: hidden;
+
+    border:
+        1px solid rgba(255,255,255,.10);
+
+    border-radius: 18px;
+
+    background:
+        rgba(255,255,255,.035);
+
+    backdrop-filter: blur(12px);
+}
+
+
+.pricing-card-content {
+    position: relative;
+
+    z-index: 2;
+
+    padding: 30px;
+}
+
+
+/* =========================================================
+   FEATURED CARD — GREEN GLOW
+========================================================= */
+
+.pricing-card-featured {
+    border: none;
+
+    isolation: isolate;
+}
+
+
+.pricing-card-featured::before {
+    content: "";
+
+    position: absolute;
+
+    inset: -2px;
+
+    z-index: -2;
+
+    border-radius: 20px;
+
+    background:
+        conic-gradient(
+            from 0deg,
+            transparent 0deg,
+            transparent 45deg,
+            rgba(118,190,135,.15) 75deg,
+            rgba(118,190,135,.95) 105deg,
+            rgba(178,225,190,.65) 125deg,
+            transparent 160deg,
+            transparent 360deg
+        );
+
+    animation:
+        pricing-border-spin
+        5s
+        linear
+        infinite;
+}
+
+
+.pricing-card-featured::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 2px;
+
+    z-index: -1;
+
+    border-radius: 16px;
+
+    background:
+        var(--background);
+}
+
+
+@keyframes pricing-border-spin {
+
+    from {
+        transform:
+            rotate(0deg);
+    }
+
+    to {
+        transform:
+            rotate(360deg);
+    }
+
+}
+
+
+/* =========================================================
+   LABEL
+========================================================= */
+
+.pricing-label {
+    display: inline-block;
+
+    margin-bottom: 16px;
+
+    color: var(--accent);
+
+    font-size: .58rem;
+
+    font-weight: 600;
+
+    letter-spacing: .14em;
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.pricing-card h3 {
+    margin: 0;
+
+    color: var(--text);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 1.65rem;
+
+    font-weight: 400;
+
+    line-height: 1.05;
+}
+
+
+/* =========================================================
+   PRICE
+========================================================= */
+
+.pricing-price {
+    display: flex;
+
+    align-items: baseline;
+
+    flex-wrap: wrap;
+
+    gap: 7px;
+
+    margin-top: 22px;
+}
+
+
+.pricing-price strong {
+    color: var(--text);
+
+    font-size: 1.65rem;
+
+    font-weight: 600;
+
+    letter-spacing: -.03em;
+}
+
+
+.pricing-price span {
+    color: var(--muted);
+
+    font-size: .72rem;
+}
+
+
+.pricing-minimum {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 7px;
+
+    margin:
+        7px 0 0;
+
+    color: var(--muted);
+
+    font-size: 0.90rem;
+}
+
+
+.pricing-minimum span {
+    opacity: .45;
+}
+
+
+/* =========================================================
+   DIVIDER
+========================================================= */
+
+.pricing-divider {
+    width: 100%;
+
+    height: 1px;
+
+    margin:
+        23px 0 20px;
+
+    background:
+        rgba(255,255,255,.08);
+}
+
+
+/* =========================================================
+   FEATURES
+========================================================= */
+
+.pricing-features {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 11px;
+
+    margin: 0;
+
+    padding: 0;
+
+    list-style: none;
+}
+
+
+.pricing-features li {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 10px;
+
+    color: rgba(255,255,255,.68);
+
+    font-size: 0.90rem;
+
+    line-height: 1.45;
+}
+
+
+.pricing-features i {
+    flex-shrink: 0;
+
+    margin-top: 2px;
+
+    color: var(--accent);
+
+    font-size: 1.2rem;
 }

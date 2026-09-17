@@ -14,10 +14,23 @@ html {
 
 body {
     overflow-x: hidden;
-    background: #0f0f0f;
+
+    background:
+        linear-gradient(
+            rgba(15, 20, 15, 0.72),
+            rgba(15, 20, 15, 0.72)
+        ),
+        url("../images/hero-image.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
     color: #ffffff;
     font-family: Arial, sans-serif;
 }
+
+
 
 a {
     color: inherit;
@@ -40,15 +53,15 @@ button {
 ========================= */
 
 :root {
-    --background: #0f0f0f;
+    --background: #16100b;
 
     --text: #ffffff;
 
     --text-secondary: #bdbdbd;
 
-    --accent: #ff7a00;
+    --accent: #41744d;
 
-    --accent-light: #ffb347;
+    --accent-light: #78866c;
 
     --gradient:
         linear-gradient(
@@ -240,7 +253,7 @@ button {
 .line-1 {
     width: 18px;
 
-    background: var(--accent);
+    background: #2d9a17;
 }
 
 .line-2 {
@@ -252,7 +265,7 @@ button {
 .line-3 {
     width: 18px;
 
-    background: var(--accent);
+    background: #2d9a17;
 }
 
 .hamburger.active .line-1 {
@@ -418,7 +431,7 @@ button {
 
     gap: 10px;
 
-    color: rgb(255, 123, 0);
+    color: rgb(47, 157, 97);
    
 }
 
@@ -627,7 +640,7 @@ button {
         60px
         30px;
 
-    background: #0b0b0b;
+    background: #000000;
 
     color: white;
 }
