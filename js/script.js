@@ -25,6 +25,18 @@ const galleryData = {
                 alt: "Natură și munți"
             },
             {
+                src: "images/exterior6.jpg",
+                alt: "Natură și munți"
+            },
+            {
+                src: "images/exterior7.jpg",
+                alt: "Natură și munți"
+            },
+            {
+                src: "images/exterior8.jpg",
+                alt: "Natură și munți"
+            },
+            {
                 src: "images/exterior5.png",
                 alt: "Natură și munți"
             }

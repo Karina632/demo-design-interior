@@ -35,7 +35,7 @@ body::before {
             rgba(15, 20, 15, 0.72),
             rgba(15, 20, 15, 0.72)
         ),
-        url("../images/hero-image.jpg");
+        url("../images/exterior3.jpg");
 
     background-size: cover;
     background-position: center;
@@ -267,7 +267,7 @@ button {
 .line-1 {
     width: 18px;
 
-    background: #2d9a17;
+    background: #66bb56;
 }
 
 .line-2 {
@@ -279,7 +279,7 @@ button {
 .line-3 {
     width: 18px;
 
-    background: #2d9a17;
+    background: #66bb56;
 }
 
 .hamburger.active .line-1 {
